@@ -14,279 +14,7 @@
       crossorigin="anonymous"
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css" rel="stylesheet">
-    <style>body {
-  direction: rtl;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.search {
-  padding: 1.5rem;
-}
-.search form {
-  max-width: 500px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.search form i {
-  position: absolute;
-  left: 20px;
-  top: 14px;
-  pointer-events: none;
-  color: #555;
-  transition: all 1s ease-in-out;
-}
-.search form input {
-  flex: 1;
-  padding: 1.25rem;
-}
-
-h2 a {
-  color: inherit;
-}
-.navbar {
-  box-shadow: 0 1px 4px #2225;
-  background-color: #fff !important;
-}
-li.nav-item {
-  color: #444;
-}
-.navbar .nav-link {
-  font-size: 1.1rem;
-  color: inherit;
-}
-
-.navbar .fa-bars {
-  display: none;
-}
-
-
-
-
-.flip-entries {
-  margin-bottom: 50px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: fit-content;
-}
-
-/* iframe {
-  position: unset !important;
-  width: 100%;
-  height: 280px;
-  border: none;
-} */
-
-
-.section__style h2 {
-  border-bottom: 1px solid #ccc8;
-  background-color: #e5e1e155 !important;
-  padding: 0.25rem 1rem;
-}
-
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-.card-title {
-  cursor: pointer;
-  transition: color .2s ease-in-out;
-}
-.card-title:hover {
-  color: #555;
-  text-decoration: underline;
-}
-
-#authors {
-  border-top: 1px solid #ccc8;
-  padding-top: 1.5rem;
-}
-
-
-/* Modal */
-
-#modal {
-  background: #0009;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .2s ease-out;
-  overflow: auto;
-}
-.modal-content {
-  pointer-events: inherit;
-}
-#modal.open {
-  pointer-events: unset;
-  opacity: 1
-}
-.modal-content {
-  height: 100%;
-  overflow: hidden;
-}
-
-#modalClose {
-  position: absolute;
-    left: 7px;
-    top: 11px;
-}
-.modal-head.d-flex.justify-content-between.align-items-center {
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
-}
-
-#modalAvatar {
-  width: 120px;
-  border-radius: 50%;
-  height: 120px;
-  object-fit: cover;
-  border: 2px solid #ccc;
-  padding: 1px;
-}
-
-/* #pageCategory .col-md-4 {
-  max-width: fit-content;
-} */
-#pageCategory img {
-  max-height: 180px;
-  max-width: 180px;
-  object-fit: cover;
-}
-
-.singular {
-  background-color: #e8e5e5 !important;
-  border: 1px solid #ccc;
-  flex-wrap:wrap;
-}
-.singular img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
-.singular p {
-  max-width:80%
-}
-.author__info {
-  flex: 1;
-  min-width: 310px;
-}
-@media(max-width: 575px) {
-  .nav-link {
-    padding: .5rem;
-    font-size: 1rem;
-  }
-  .navbar ul{
-    position: absolute;
-    top: 77px;
-    right: 0;
-    background: #fff;
-    width: 100%;
-    flex-direction: column;
-    padding: 0px 70px;
-    max-height:0;
-    overflow: hidden;
-    transition: max-height .2s ease-out;
-    z-index: 9
-  }
-  .navbar ul.showMenu {
-    max-height: fit-content;
-  }
-  .navbar .fa-bars {
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: .25rem;
-    padding: .5rem;
-    cursor: pointer;
-  }
-  #dropdownMenu{
-    width: 100%;
-    position: unset;
-    border: none !important;
-  }
-}
-
-footer img {
-  max-width: 170px;
-  display: block;
-  margin-right: auto;
-}
-
-footer .d-flex {
-  border-top: 1px solid #ccc ;
-  padding-top: 10px;
-}
-
-
-/* Css external */
-
-.flip-entries{
-  display: flex;
-  flex-wrap: wrap;
-}
-.flip-grid-view .flip-entry {
-  float: none !important;
-  height: 190px;
-  margin-bottom: 40px;
-  position: relative;
-  text-align: center;
-  width: 180px;
-}
-
-.flip-grid-view .flip-entry-title {
-  bottom: 3px;
-  color: #777;
-  cursor: pointer;
-  font-size: 14px;
-  left: 0;
-  margin: 0 !important;
-  position: absolute;
-  width: 100%;
-}
-
-
-/* Selem Dev */
-#authors .card-title a:hover {border: none !important}
-*:focus {
-    outline: 0 !important;
-}
-#book-img {cursor: pointer; transition: transform .5s ease-in-out;}
-#book-img:hover {transform: translateY(-10px);}
-#gif {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999999;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
- i.animateSearch {animation: moveRight 4s ease-in-out }
- i.unAnimateSearch {animation: moveLeft 4s ease-in-out }
- @keyframes moveRight {
-  0% {
-    left: 20px;
-  }
-  100% {
-    left: 96%
-  }
-}
-@keyframes moveLeft {
-  0% {
-    left: 96%;
-  }
-  100% {
-    left: 20px
-  }
-}
-/* Selem Dev */</style>
+    <link rel="stylesheet" href="css/style.css" />
     <title>مكتبة خيال</title>
   </head>
   <body>
@@ -314,30 +42,29 @@ footer .d-flex {
           </li>
         </ul>
 
-          <a class="navbar-brand" href="/index.html"
-            ><img
-              style="max-height: 70px"
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh90OteEJRyG3wVRJiVavIvfP1UGc6izsCQMN93UnRcFC2jYoqwetphAn1Gel--vYEI73O4zZUiXTvf9V7izFWc2rQZkUKTlskiNsQxwUs8IL7VDA-QC2qSb0a2TQb7F8u4usT1jOPKwOJgMFvUVf_iTs66EOT1sR-vm5Gi3CtelVRNlrM67YhuKnzL/s1142/3fa630cc-9e26-4cd1-b36c-beb6f6ee1f9e.jpg"
-              alt=""
-          /></a>
+        <a class="navbar-brand" href="/index.html"
+          ><img
+            style="max-height: 70px"
+            src="images/3fa630cc-9e26-4cd1-b36c-beb6f6ee1f9e.jpg"
+            alt=""
+        /></a>
       </div>
     </nav>
   <!-- Navbar -->
     <div class="container text-center">
-      <img class="mt-3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhR7SqJGt1cZyhcFb_p3YCMuju0aiyTzqVg3cDcjH12Mmp5jywG7vLfEYQyGH_4wAFeaO-XBj88Se0T5RyX9RZi2UogmM1-PpnIQ4UaAEL5gR__nOzRunAcGH5IJZHDKPTJ2T3bki_i9i9oq9UAm8BLOCRVlYPe6GflZ5TdhP7LA40ExImMBKQUNwhn/s320/lib.png" style="max-width: 100%; max-height: 100%;" alt="lib" >
+      <img class="mt-3" src="images/lib.png" style="max-width: 100%; max-height: 100%;" alt="lib" >
     </div>
-          <footer dir="rtl" class="text-center" >
+    <footer>
       <div class="container">
-       <a href="index.html">
+        <a href="index.html">
           <img
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBOebgBeSAN5jFbFhCPSNX83VPtwaQXuCYY90ax0U2_N2DjBtF_p8IoJ2n17vxV2hNQOJykoqX_q-ndPTOwH1DzKfxE3lM7tWsYx3j3_TVMUoWU_a-HcObEL5kX8oW7tZXjajMSleqaAD1c9nu-PcMbqZOPtdfmpj8uCN5locoXRKhtsdum4-UBI45/s732/31b9dfa6-6b59-4bb2-a5f9-61ed2ac0b980.png"
+            src="images/31b9dfa6-6b59-4bb2-a5f9-61ed2ac0b980.png"
             max-height="150px"
             alt=""
           />
         </a>
-        <div class="mt-3 d-flex justify-content-around">
+        <div class="mt-3 d-flex justify-content-between">
           <p>
-            <div class="row">
  <a
               class="btn btn-sm btn-danger"
               href="mailto:khiallibrary.com@gmail.com"
@@ -351,17 +78,15 @@ footer .d-flex {
               ><i class="fab fa-telegram"></i>
             </a>
                         <a href="https://www.paypal.com/paypalme/ziadmohamedkhial" class="btn btn-sm" >
-              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBbKX-FLkAT_GVsRp-qyLUrsOCgRQP9GLAQGC6bIQUCA7fy_UB6dE2jMDV-mAMU_h7KgallCO3e-t163nYX5d40ezlGSoB0-3-_pSzl24-PhAJ-3jd0A-4PaN52ymz3Z_4myzmc_boYF4G8GVMT-ge63eZgvXPXxeb8hSpKkOz0khog9Y3FZmtsV3n/s256/paypal.webp" alt="paypal" width="25">
+              <img src="paypal.webp" alt="paypal" width="25">
             </a>
                         <a href="https://www.youtube.com/channel/UCEwcICZxM-ZsqYjmAnBwXdg" class="btn btn-sm" >
-              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEimtGfVrT_Y2VlCwA13Y8RiIMHjuAfb9dU1fdlejxJo77tJptngDIhXDXsc5CHF0gk2Bytmvm-RWiCKAQo2uupZE1f-MktnPQLk4hcmuIxXENkGpLxPjn4h5iVVoHCzLgc4J97JkMr1NDNwjAMmCP6iS79B9vlHYmW47kj2f2Ao1vpnmT8TjfPTk3AH/s512/youtube.png" alt="youtube" width="25">
+              <img src="youtube.png" alt="youtube" width="25">
             </a>
             </a>
             <a href="https://chat.whatsapp.com/Hrx5dPklldU0PGDvqutZ7J" class="btn btn-sm" >
-              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRnn70oPUwF4fgm6uZtvGSMNbBY7bvZjVK-CFSHqqHGu-bp8gKRqvHwatsHIuUDnmW2CHU6kz015VgkMac8RSw0p269YyqIvxCJQ1EJefcjFmRkaB8tYyrJ3As911psiQ-D9m-diml1Dr4SDt3tQ06dqnVOJ02mAYc8we8V2hNYU_UPNjKBdRksQTf/s664/whatsapp.png" alt="whatsapp" width="25">
+              <img src="whatsapp.png" alt="whatsapp" width="25">
             </a>
-            </div>
-           
           </p>
           <p>© 2020 MyCompany. All rights reserved</p>
         </div>
@@ -377,7 +102,7 @@ footer .d-flex {
       integrity="sha384-40ix5a3dj6/qaC7tfz0Yr+p9fqWLzzAXiwxVLt9dw7UjQzGYw6rWRhFAnRapuQyK"
       crossorigin="anonymous"
     ></script>
-
+    <script src="js/main.js"></script>
     <script>
         document.querySelector('.navbar .fa-bars').addEventListener('click', () => {
     document.querySelector('.navbar .list-unstyled').classList.toggle('showMenu')
